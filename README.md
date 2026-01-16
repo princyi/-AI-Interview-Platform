@@ -18,10 +18,10 @@ This Flask backend will power the AI-driven voice interview platform. Key featur
 
 ## How its work (output) 
 
-# Document Intelligence:
+## Document Intelligence:
 Implement PDF/Resume upload with automated text extraction to personalize interview questions.
 
-# AI Question Engine:
+## AI Question Engine:
 Integration with Google Gemini for dynamic, role-specific question generation.
 
 # Voice-Enabled Interviews:

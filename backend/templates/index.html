@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Interview Platform</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="main-container">
+        <!-- Header -->
+        <div class="header">
+            <h1><i class="fas fa-brain"></i> AI Interview Platform</h1>
+            <p>Automated recruitment with intelligent voice interviews</p>
+        </div>
+
+        <!-- Step 1: Candidate Information -->
+        <div class="step-container active" id="step1">
+            <div class="glass-container">
+                <div class="step-header">
+                    <div class="step-number">1</div>
+                    <div class="step-title">Candidate Information</div>
+                </div>
+                
+                <div class="form-group">
+                    <label class="form-label">Candidate Name</label>
+                    <input type="text" class="form-input" id="candidateName" placeholder="Enter your full name">
+                </div>
+                
+                <div class="form-group">
+                    <label class="form-label">Job Title</label>
+                    <input type="text" class="form-input" id="jobTitle" placeholder="e.g., Software Engineer, Data Scientist">
+                </div>
+                
+                <div class="form-group">
+                    <label class="form-label">Experience Level</label>
+                    <select class="form-input" id="experienceLevel">
+                        <option value="fresher">Fresher (0-1 years)</option>
+                        <option value="intermediate" selected>Intermediate (2-5 years)</option>
+                        <option value="experienced">Experienced (5+ years)</option>
+                    </select>
+                </div>
+                
+                <button class="btn btn-primary" onclick="nextStep(2)">
+                    Continue <i class="fas fa-arrow-right"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Step 2: Document Upload -->
+        <div class="step-container hidden" id="step2">
+            <div class="glass-container">
+                <div class="step-header">
+                    <div class="step-number">2</div>
+                    <div class="step-title">Upload Documents</div>
+                </div>
+                
+                <div class="form-group">
+                    <label class="form-label">Resume/CV</label>
+                    <div class="file-upload" onclick="document.getElementById('resumeFile').click()">
+                        <input type="file" id="resumeFile" accept=".pdf,.docx,.txt" onchange="handleFileUpload('resume', this)">
+                        <div class="file-upload-text" id="resumeUploadText">
+                            <i class="fas fa-cloud-upload-alt"></i><br>
+                            Click to upload your resume (PDF, DOCX, TXT)
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label class="form-label">Job Description</label>
+                    <div class="file-upload" onclick="document.getElementById('jobFile').click()">
+                        <input type="file" id="jobFile" accept=".pdf,.docx,.txt" onchange="handleFileUpload('job', this)">
+                        <div class="file-upload-text" id="jobUploadText">
+                            <i class="fas fa-cloud-upload-alt"></i><br>
+                            Click to upload job description (PDF, DOCX, TXT)
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label class="form-label">Or paste job description manually</label>
+                    <textarea class="form-input" id="jobDescriptionText" placeholder="Paste job description here..."></textarea>
+                </div>
+                
+                <div style="display: flex; gap: 1rem;">
+                    <button class="btn btn-secondary" onclick="previousStep(1)">
+                        <i class="fas fa-arrow-left"></i> Back
+                    </button>
+                    <button class="btn btn-primary" onclick="generateQuestions()" id="generateBtn">
+                        Generate Questions <i class="fas fa-magic"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Step 3: AI-Generated Questions -->
+        <div class="step-container hidden" id="step3">
+            <div class="glass-container">
+                <div class="step-header">
+                    <div class="step-number">3</div>
+                    <div class="step-title">AI-Generated Questions</div>
+                </div>
+                
+                <div id="questionsContainer">
+                    <!-- Questions will be populated here -->
+                </div>
+                
+                <div style="display: flex; gap: 1rem; justify-content: center;">
+                    <button class="btn btn-secondary" onclick="previousStep(2)">
+                        <i class="fas fa-arrow-left"></i> Back
+                    </button>
+                    <button class="btn btn-primary" onclick="startInterview()">
+                        Start Interview <i class="fas fa-microphone"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Step 4: Voice Interview -->
+        <div class="step-container hidden" id="step4">
+            <div class="glass-container">
+                <div class="step-header">
+                    <div class="step-number">4</div>
+                    <div class="step-title">Voice Interview</div>
+                </div>
+                
+                <div class="progress-container">
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="progressFill" style="width: 0%"></div>
+                    </div>
+                    <p style="color: white; text-align: center; margin-top: 0.5rem;">
+                        Question <span id="currentQuestionNum">1</span> of <span id="totalQuestions">5</span>
+                    </p>
+                </div>
+                
+                <div class="question-card" id="currentQuestionCard">
+                    <div class="question-meta">
+                        <span class="question-badge badge-technical" id="questionType">Technical</span>
+                        <span class="question-badge badge-medium" id="questionDifficulty">Medium</span>
+                    </div>
+                    <div class="question-text" id="currentQuestionText">
+                        Question will appear here...
+                    </div>
+                </div>
+                
+                <div class="voice-controls">
+                    <button class="voice-btn play" onclick="playQuestion()" id="playBtn" title="Play Question">
+                        <i class="fas fa-play"></i>
+                    </button>
+                    <button class="voice-btn record" id="startAnswerBtn" onclick="startAnswering()" 
+                            style="background: linear-gradient(45deg, #2ed573, #1e90ff);" title="Start Answer">
+                        <i class="fas fa-microphone-alt"></i>
+                        <div style="font-size: 0.7rem; margin-top: 0.2rem;">Start Answer</div>
+                    </button>
+                    <button class="voice-btn record hidden" id="endAnswerBtn" onclick="endAnswering()" 
+                            style="background: linear-gradient(45deg, #ff4757, #ff3742);" title="End Answer">
+                        <i class="fas fa-stop"></i>
+                        <div style="font-size: 0.7rem; margin-top: 0.2rem;">End Answer</div>
+                    </button>
+                </div>
+                
+                <div class="form-group" style="text-align: center;">
+                    <label class="form-label">🔊 System Volume</label>
+                    <input type="range" id="volumeControl" min="0" max="100" value="80" 
+                           style="width: 200px; margin: 0.5rem;" onchange="updateVolume(this.value)">
+                    <span id="volumeDisplay" style="color: white; margin-left: 0.5rem;">80%</span>
+                </div>
+                
+                <div id="answerStatus" class="status-message status-info hidden">
+                    🎧 Listen to the question, then click "Start Answer" to speak your response
+                </div>
+                
+                <div class="form-group">
+                    <label class="form-label">Your Answer (Voice-to-Text)</label>
+                    <textarea class="form-input" id="answerText" placeholder="Your answer will appear here as you speak..." rows="4"></textarea>
+                </div>
+                
+                <div style="display: flex; gap: 1rem; justify-content: center;">
+                    <button class="btn btn-secondary" onclick="skipQuestion()">
+                        Skip <i class="fas fa-forward"></i>
+                    </button>
+                    <button class="btn btn-primary hidden" onclick="nextQuestion()" id="nextQuestionBtn">
+                        Next Question <i class="fas fa-arrow-right"></i>
+                    </button>
+                    <button class="btn btn-primary hidden" onclick="finishInterview()" id="finishBtn">
+                        Finish Interview <i class="fas fa-check"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Step 5: Results -->
+        <div class="step-container hidden" id="step5">
+            <div class="glass-container">
+                <div class="step-header">
+                    <div class="step-number">5</div>
+                    <div class="step-title">Interview Results</div>
+                </div>
+                
+                <div class="results-container" id="resultsContainer">
+                    <!-- Results will be populated here -->
+                </div>
+                
+                <div style="text-align: center; margin-top: 2rem;">
+                    <button class="btn btn-primary" onclick="startNewInterview()">
+                        Start New Interview <i class="fas fa-plus"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Status messages -->
+        <div id="statusMessage" class="hidden"></div>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

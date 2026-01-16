@@ -1,0 +1,41 @@
+Job Title: AI/ML Engineer (Fresher)
+Location: [Pune / Onsite]
+Employment Type: Full-Time
+Experience Required: 0–1 Year (Freshers Welcome)
+
+Job Summary:
+We are seeking a passionate and self-motivated AI/ML Engineer to join our team. As a fresher, you will work alongside experienced professionals to build, train, and deploy machine learning models for real-world applications. This is an excellent opportunity for recent graduates who want to kickstart their career in AI and Machine Learning.
+
+Key Responsibilities:
+Assist in collecting, preprocessing, and analyzing structured and unstructured data.
+
+Support in building and training machine learning and deep learning models.
+
+Collaborate with data scientists and software developers to integrate models into applications.
+
+Conduct model evaluation, tuning, and performance improvement.
+
+Stay up-to-date with the latest research and development in AI/ML technologies.
+
+Help in preparing technical documentation and reports.
+
+Required Skills:
+Solid understanding of Machine Learning, Deep Learning, and AI fundamentals.
+
+Proficiency in Python and familiarity with libraries like NumPy, Pandas, Scikit-learn, TensorFlow, or PyTorch.
+
+Knowledge of data preprocessing, feature engineering, and model evaluation techniques.
+
+Familiarity with version control systems like Git.
+
+Strong problem-solving and analytical thinking skills.
+
+Good communication and teamwork abilities.
+
+Preferred Qualifications:
+Bachelor’s degree in Computer Science, Data Science, AI, or related fields.
+
+Academic or personal projects in AI/ML.
+
+Participation in hackathons, open-source contributions, or Kaggle competitions is a plus.
+

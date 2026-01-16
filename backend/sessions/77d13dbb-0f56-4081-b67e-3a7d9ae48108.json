@@ -1,0 +1,71 @@
+{
+  "session_id": "77d13dbb-0f56-4081-b67e-3a7d9ae48108",
+  "candidate_name": "Aniket Katkar",
+  "job_title": "Full Stack Developer",
+  "resume_text": "Job Title: AI/ML Engineer (Fresher)\nLocation: [Pune / Onsite]\nEmployment Type: Full-Time\nExperience Required: 0\u20131 Year (Freshers Welcome)\n\nJob Summary:\nWe are seeking a passionate and self-motivated AI/ML Engineer to join our team. As a fresher, you will work alongside experienced professionals to build, train, and deploy machine learning models for real-world applications. This is an excellent opportunity for recent graduates who want to kickstart their career in AI and Machine Learning.\n\nKey Responsibilities:\nAssist in collecting, preprocessing, and analyzing structured and unstructured data.\n\nSupport in building and training machine learning and deep learning models.\n\nCollaborate with data scientists and software developers to integrate models into applications.\n\nConduct model evaluation, tuning, and performance improvement.\n\nStay up-to-date with the latest research and development in AI/ML technologies.\n\nHelp in preparing technical documentation and reports.\n\nRequired Skills:\nSolid understanding of Machine Learning, Deep Learning, and AI fundamentals.\n\nProficiency in Python and familiarity with libraries like NumPy, Pandas, Scikit-learn, TensorFlow, or PyTorch.\n\nKnowledge of data preprocessing, feature engineering, and model evaluation techniques.\n\nFamiliarity with version control systems like Git.\n\nStrong problem-solving and analytical thinking skills.\n\nGood communication and teamwork abilities.\n\nPreferred Qualifications:\nBachelor\u2019s degree in Computer Science, Data Science, AI, or related fields.\n\nAcademic or personal projects in AI/ML.\n\nParticipation in hackathons, open-source contributions, or Kaggle competitions is a plus.\n\n",
+  "job_description": "Job Title: AI/ML Engineer (Fresher)\nLocation: [Pune / Onsite]\nEmployment Type: Full-Time\nExperience Required: 0\u20131 Year (Freshers Welcome)\n\nJob Summary:\nWe are seeking a passionate and self-motivated AI/ML Engineer to join our team. As a fresher, you will work alongside experienced professionals to build, train, and deploy machine learning models for real-world applications. This is an excellent opportunity for recent graduates who want to kickstart their career in AI and Machine Learning.\n\nKey Responsibilities:\nAssist in collecting, preprocessing, and analyzing structured and unstructured data.\n\nSupport in building and training machine learning and deep learning models.\n\nCollaborate with data scientists and software developers to integrate models into applications.\n\nConduct model evaluation, tuning, and performance improvement.\n\nStay up-to-date with the latest research and development in AI/ML technologies.\n\nHelp in preparing technical documentation and reports.\n\nRequired Skills:\nSolid understanding of Machine Learning, Deep Learning, and AI fundamentals.\n\nProficiency in Python and familiarity with libraries like NumPy, Pandas, Scikit-learn, TensorFlow, or PyTorch.\n\nKnowledge of data preprocessing, feature engineering, and model evaluation techniques.\n\nFamiliarity with version control systems like Git.\n\nStrong problem-solving and analytical thinking skills.\n\nGood communication and teamwork abilities.\n\nPreferred Qualifications:\nBachelor\u2019s degree in Computer Science, Data Science, AI, or related fields.\n\nAcademic or personal projects in AI/ML.\n\nParticipation in hackathons, open-source contributions, or Kaggle competitions is a plus.\n\n",
+  "created_at": "2025-09-21T16:12:20.990843",
+  "status": "completed",
+  "questions": [
+    {
+      "id": 1,
+      "question": "Describe a specific AI/ML project you've worked on, either academic or personal. What was the problem you were trying to solve, what techniques did you use, and what were the key challenges you faced?",
+      "type": "technical",
+      "difficulty": "medium"
+    },
+    {
+      "id": 2,
+      "question": "Let's say you are working on a classification problem and you notice your model has high accuracy on the training data but performs poorly on unseen data. What are some potential reasons for this, and what steps would you take to address the issue?",
+      "type": "technical",
+      "difficulty": "medium"
+    },
+    {
+      "id": 3,
+      "question": "Imagine you are working with a team on an AI/ML project and you disagree with a proposed approach. How would you communicate your concerns and contribute to finding a better solution?",
+      "type": "behavioral",
+      "difficulty": "medium"
+    }
+  ],
+  "conversation": [
+    {
+      "question_id": 1,
+      "question": "Describe a specific AI/ML project you've worked on, either academic or personal. What was the problem you were trying to solve, what techniques did you use, and what were the key challenges you faced?",
+      "answer": "so the challenges that we I face that are the technical challenge that I face that which type of library should I use which type of Framework should I use which is the applicable or capable of solving this problem statement that also may issue and in the academic perspective the I was preparing for the I was giving the hacks and all that stop for my Engineering at that time I work on academic and mostly it is the best for that at the time and for personal created lot of agentic tools that automatically ",
+      "timestamp": "2025-09-21T16:13:38.593543"
+    },
+    {
+      "question_id": 2,
+      "question": "Let's say you are working on a classification problem and you notice your model has high accuracy on the training data but performs poorly on unseen data. What are some potential reasons for this, and what steps would you take to address the issue?",
+      "answer": "basically that for the classification problem I will understand the problem statement so which type of problem statement is these so which type of algorithm classification algorithm should I use so according to that I will first understand analyse the problem statement first after that I will I will take of 5 to 6 algorithms depending on the data and I will do the trial part give the what is the accuracy what are the what are the different different aspects of the different different algorithm on these in data and I will understand which is giving the more accurate so I will take that reasons for that to address issue so I will understand the which type of issue will occur during my project so that's all from ",
+      "timestamp": "2025-09-21T16:14:53.967526"
+    }
+  ],
+  "current_question_index": 2,
+  "analysis": {
+    "overall_score": 40,
+    "category_scores": {
+      "technical_skills": 45,
+      "communication": 30,
+      "problem_solving": 40,
+      "cultural_fit": 50,
+      "experience_relevance": 35
+    },
+    "strengths": [
+      "Acknowledgement of the importance of understanding the problem statement.",
+      "Awareness of different algorithms for classification problems.",
+      "Mention of building 'agentic tools' potentially showing some hands-on experience, though unclear."
+    ],
+    "areas_for_improvement": [
+      "Lack of specific project details and quantifiable results.",
+      "Unclear and rambling communication style.",
+      "Weak understanding of core ML concepts like overfitting.",
+      "Insufficient depth in addressing the 'overfitting' problem.",
+      "Absence of specific examples related to libraries and frameworks used."
+    ],
+    "detailed_feedback": "The candidate's responses indicate a limited understanding of AI/ML concepts and a lack of practical experience. The candidate struggles to articulate their experience in a clear and concise manner. Their response to the first question is vague, lacking specific details about the project's goals, techniques used, and results achieved. Instead of describing a project, the candidate mentions generic challenges like 'which library to use' and vaguely mentions 'agentic tools.' This lacks the detail expected even from a fresher. The response to the second question regarding overfitting is also weak. While the candidate acknowledges the importance of understanding the problem statement and trying different algorithms, they fail to demonstrate an understanding of overfitting itself. They don't mention crucial strategies such as regularization, cross-validation, or gathering more data to address the issue. Their communication is unclear and repetitive, making it difficult to assess their technical knowledge. The 'trial part' mentioned for selecting algorithms doesn't demonstrate a structured approach to model selection or evaluation. In summary, the candidate needs to improve their communication skills and deepen their understanding of fundamental AI/ML concepts.",
+    "recommendation": "reject",
+    "confidence_level": 85
+  },
+  "updated_at": "2025-09-21T16:16:15.212788",
+  "completed_at": "2025-09-21T16:16:15.212419"
+}

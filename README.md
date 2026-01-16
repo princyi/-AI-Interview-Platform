@@ -18,11 +18,13 @@ This Flask backend will power the AI-driven voice interview platform. Key featur
 
 ## How its work (output) 
 
-### **1. Document Intelligence: Implement PDF/Resume upload with automated text extraction to personalize interview questions.
+1. Document Intelligence: Implement PDF/Resume upload with automated text extraction to personalize interview questions.
 
-### **2. AI Question Engine: Integration with Google Gemini for dynamic, role-specific question generation.
+2. AI Question Engine: Integration with Google Gemini for dynamic, role-specific question generation.
 
-### **4. Analytics Dashboard: Build an automated scoring system and session history storage using Drizzle ORM & PostgreSQL.
+3. Voice-Enabled Interviews: Add Speech-to-Text (STT) and Text-to-Speech (TTS) for a natural, hands-free interview experience.
+
+4. Analytics Dashboard: Build an automated scoring system and session history storage using Drizzle ORM & PostgreSQL.
 
 
 ### **1. Core Framework & Language**

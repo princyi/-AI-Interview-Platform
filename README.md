@@ -16,7 +16,7 @@ This Flask backend will power the AI-driven voice interview platform. Key featur
 - `services/`: Core logic (document processing, AI, voice)
 - `static/` and `templates/`: For frontend (if using Flask templates)
 
-## Upcoming Features
+## How its work (output) 
 
 Document Intelligence: Implement PDF/Resume upload with automated text extraction to personalize interview questions.
 

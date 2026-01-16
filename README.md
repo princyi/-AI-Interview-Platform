@@ -28,11 +28,11 @@ This Flask backend will power the AI-driven voice interview platform. Key featur
 
 
 ### **1. Core Framework & Language**
-Next.js (React): Serves as the Frontend & Orchestration layer. It handles user authentication, the dashboard interface, and real-time webcam/voice interaction.
+* **Next.js (React):**  Serves as the Frontend & Orchestration layer. It handles user authentication, the dashboard interface, and real-time webcam/voice interaction.
 
-Python: Serves as the AI & Data Intelligence layer. It is used for backend tasks where Python’s AI ecosystem excels, such as complex document parsing or advanced Natural Language Processing (NLP).
+* **Python:**  Serves as the AI & Data Intelligence layer. It is used for backend tasks where Python’s AI ecosystem excels, such as complex document parsing or advanced Natural Language Processing (NLP).
 
-TypeScript: Used within the Next.js environment to ensure Type Safety, reducing runtime errors and making the communication between the frontend and the AI backend more predictable.
+* **TypeScript:**  Used within the Next.js environment to ensure Type Safety, reducing runtime errors and making the communication between the frontend and the AI backend more predictable.
 
 ### **2. Frontend & Styling**
 

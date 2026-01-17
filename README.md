@@ -24,8 +24,6 @@ This Flask backend will power the AI-driven voice interview platform. Key featur
 
 3. Voice-Enabled Interviews: Add Speech-to-Text (STT) and Text-to-Speech (TTS) for a natural, hands-free interview experience.
 
-4. Analytics Dashboard: Build an automated scoring system and session history storage using Drizzle ORM & PostgreSQL.
-
 
 ### **1. Core Framework & Language**
 * **Next.js (React):**  Serves as the Frontend & Orchestration layer. It handles user authentication, the dashboard interface, and real-time webcam/voice interaction.
